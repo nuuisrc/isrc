@@ -1,6 +1,13 @@
 (function($) {
 
 $(document).ready(function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //使用javascript回傳使用者瀏覽裝置的版本
+        $('body').css('font-size', '2.6em');
+    }else {
+        $('body').css('font-size', '1em');
+    }
+    
+    
 	$('#logo').click(function() {
 		window.location.assign('./index.html');
 	});
