@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
 
 $(document).ready(function () {
 	$('#logo').click(function() {
@@ -60,7 +60,7 @@ function showNews() {
 		if(id == null) {
 			$temp_news = $body.find('#news');
 			for (var i=0; i<newsData.length; i++) {
-				var content = newsData[i].content;
+				var content = newsData[i].content.replace(/<(?:.|\n)*?>/gm, '');
 				if(content.length > 200)
 					content = content.substr(0, 200) + "......";
 				
